@@ -1,0 +1,21 @@
+language: node_js
+sudo: false
+cache:
+  directories:
+    - $HOME/.npm
+notifications:
+  email:
+    on_failure: always
+install:
+  - npm install
+  - pip install --user awscli
+  - pip install --user aws-sam-cli
+node_js:
+  - "8.10"
+script:
+  - npm run sam:validate
+  - npm run lint
+  - npm test
+  - npx codecov
+after_success:
+  - npx semantic-release

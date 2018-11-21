@@ -1,0 +1,71 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: "AWS::Serverless-2016-10-31"
+Description: JSON API para consultar la Tasa Representativa del Mercado en la Superintendencia Financiera de Colombia.
+Globals:
+  Api:
+    Cors: "*"
+Resources:
+  TrmTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: partition
+          AttributeType: N
+        - AttributeName: date
+          AttributeType: S
+      KeySchema:
+        - AttributeName: partition
+          KeyType: HASH
+        - AttributeName: date
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      Tags:
+        - Key: AppName
+          Value: !Ref AWS::StackName
+  DateApi:
+    Type: "AWS::Serverless::Function"
+    Properties:
+      Handler: handler.trm
+      Runtime: nodejs8.10
+      CodeUri: dist/
+      Description: Consulta el servicio web de la SFC y devuelve la información en formato JSON.
+      MemorySize: 128
+      Timeout: 5
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref TrmTable
+      Environment:
+        Variables:
+          TABLE_NAME: !Ref TrmTable
+          DEBUG:
+          STAGE:
+      Events:
+        latest:
+          Type: Api
+          Properties:
+            Path: /latest
+            Method: GET
+        date:
+          Type: Api
+          Properties:
+            Path: /{date}
+            Method: GET
+        timeseries:
+          Type: Api
+          Properties:
+            Path: /timeseries
+            Method: GET
+      Tags:
+        AppName: !Ref AWS::StackName
+Outputs:
+  ApiUrl:
+    Description: Endpoint de API Gateway
+    Value: !Sub https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/
+  TrmTable:
+    Description: Tabla de DynamoDB
+    Value: !Ref TrmTable
+  DateApi:
+    Description: Función Lambda
+    Value: !Ref DateApi
