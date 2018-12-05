@@ -1,5 +1,8 @@
 # TRMAPI
 
+[![Build Status](https://travis-ci.com/archemiro/trmapi.svg?branch=master)](https://travis-ci.com/archemiro/trmapi)
+[![codecov](https://codecov.io/gh/archemiro/trmapi/branch/master/graph/badge.svg)](https://codecov.io/gh/archemiro/trmapi)
+
 JSON API para consultar la [Tasa Representativa del Mercado](http://www.banrep.gov.co/es/tasa-cambio-del-peso-colombiano-trm) (TRM) en el [Servicio Web](https://www.superfinanciera.gov.co/inicio/60819) de la Superintendencia Financiera de Colombia (SFC).
 
 Esta API es una función Lambda que se ejecuta en AWS y a la cual se accede por API Gateway, lo que garantiza su estabilidad, escalabilidad y rapidez.
