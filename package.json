@@ -5,7 +5,8 @@
   "main": "dist/handler.js",
   "scripts": {
     "format": "prettier --write **/*.{js,ts,css,less,scss,vue,json,gql,md,yml,yaml}",
-    "lint": "eslint src/**/*.js",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
     "test": "jest --coverage",
     "dynamodb:up": "docker-compose up -d dynamodb",
     "dynamodb:bootstrap": "node dynamodb/bootstrap.js",
