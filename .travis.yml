@@ -13,9 +13,9 @@ install:
 node_js:
   - "8.10"
 script:
-  - npm run sam:validate
   - npm run lint
   - npm test
   - npx codecov
 after_success:
   - npx semantic-release
+  - npm run sam:deploy
