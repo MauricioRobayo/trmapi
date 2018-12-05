@@ -169,7 +169,7 @@ Puede consultar el nombre de la tabla creada ejecutando `npm run outputs`.
 
 Instalar las dependencias:
 
-````sh
+```sh
 npm i
 ```
 
@@ -192,4 +192,3 @@ GET http://localhost:3000/latest HTTP/1.1
 [MIT](LICENSE)
 
 Hecho en ![Bandera de Colombia](https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/16px-Flag_of_Colombia.svg.png) con mucho ☕.
-````
