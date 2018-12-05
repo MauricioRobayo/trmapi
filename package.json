@@ -34,7 +34,13 @@
     "type": "git",
     "url": "git+https://github.com/archemiro/trmapi.git"
   },
-  "keywords": [],
+  "keywords": [
+    "trm",
+    "tasa de cambio",
+    "tasa representativa del mercado",
+    "Superintendencia Financiera de Colombia",
+    "tcrm"
+  ],
   "author": "Mauricio Robayo <archemiro@gmail.com> (https://www.archemiro.com)",
   "license": "MIT",
   "bugs": {
