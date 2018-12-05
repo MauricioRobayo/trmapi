@@ -18,4 +18,4 @@ script:
   - npx codecov
 after_success:
   - npx semantic-release
-  - npm run sam:deploy
+  - npm run deploy
