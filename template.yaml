@@ -3,7 +3,10 @@ Transform: "AWS::Serverless-2016-10-31"
 Description: JSON API para consultar la Tasa Representativa del Mercado en la Superintendencia Financiera de Colombia.
 Globals:
   Api:
-    Cors: "*"
+    Cors:
+      AllowMethods: "'*'"
+      AllowHeaders: "'*'"
+      AllowOrigin: "'*'"
 Resources:
   TrmTable:
     Type: AWS::DynamoDB::Table
