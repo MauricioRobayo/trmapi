@@ -42,8 +42,8 @@ Resources:
       Environment:
         Variables:
           TABLE_NAME: !Ref TrmTable
-          DEBUG:
-          STAGE:
+          DEBUG: ""
+          STAGE: "Prod"
       Events:
         latest:
           Type: Api
