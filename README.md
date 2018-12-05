@@ -1,15 +1,13 @@
 <p align="center">
-    
 <img alt="trmapi" src="./assets/trmapi-logo.png">
-
+<br/>
 <a href="https://travis-ci.com/archemiro/trmapi"><img alt="Build Status" src="https://travis-ci.com/archemiro/trmapi.svg?branch=master"></a>
 <a href="https://codecov.io/gh/archemiro/trmapi"><img alt="codecov" src="https://codecov.io/gh/archemiro/trmapi/branch/master/graph/badge.svg"></a>
 <a href="https://greenkeeper.io/"><img alt="Greenkeeper badge" src="https://badges.greenkeeper.io/archemiro/trmapi.svg"></a>
 <a href="https://twitter.com/acdlite/status/974390255393505280"><img alt="Blazing Fast" src="https://img.shields.io/badge/speed-blazing%20%F0%9F%94%A5-brightgreen.svg?style=flat-square"></a>
 <a href=""><img alt="" src=""></a>
-
+<br/>
 <img alt="Ejemplo TRMAPI" src="./assets/trmapi.png">
-
 </p>
 
 JSON API para consultar la [Tasa Representativa del Mercado](http://www.banrep.gov.co/es/tasa-cambio-del-peso-colombiano-trm) (TRM) en el [Servicio Web](https://www.superfinanciera.gov.co/inicio/60819) de la Superintendencia Financiera de Colombia (SFC).
