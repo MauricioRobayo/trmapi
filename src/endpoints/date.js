@@ -45,10 +45,9 @@ exports.getTrmDataByDate = async event => {
     if (!trmData.Item) {
       debug("Obteniendo dato de la SFC...");
       const { trm } = await cambio(date);
-      const dateTo = trm.validityTo.substring(0, 10);
       const item = { partition, date, ...trm };
       trmData.Item = filterTrmData(item, validity);
-      if (date > dateTo) {
+      if (date > trm.validityTo.substring(0, 10)) {
         return createResponse(404, {
           error: `La fecha solicitada debe ser mayor o igual a ${
             config.dataStartDate
