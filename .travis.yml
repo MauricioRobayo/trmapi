@@ -10,11 +10,16 @@ install:
   - pip install --user awscli
   - pip install --user aws-sam-cli
 node_js:
-  - "8.10"
+  - "10"
+  - "9"
+  - "8"
 script:
   - npm run lint
   - npm test
   - npx codecov
 after_success:
-  - npx semantic-release
+  - npm run travis-deploy-once "npm run semantic-release"
   - npm run deploy
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
