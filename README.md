@@ -1,9 +1,9 @@
 <p align="center">
 <img alt="trmapi" src="./assets/trmapi-logo.png">
 <br/>
-<a href="https://travis-ci.com/archemiro/trmapi"><img alt="Build Status" src="https://travis-ci.com/archemiro/trmapi.svg?branch=master"></a>
-<a href="https://codecov.io/gh/archemiro/trmapi"><img alt="codecov" src="https://codecov.io/gh/archemiro/trmapi/branch/master/graph/badge.svg"></a>
-<a href="https://greenkeeper.io/"><img alt="Greenkeeper badge" src="https://badges.greenkeeper.io/archemiro/trmapi.svg"></a>
+<a href="https://travis-ci.com/trmapi/trmapi"><img alt="Build Status" src="https://travis-ci.com/trmapi/trmapi.svg?branch=master"></a>
+<a href="https://codecov.io/gh/trmapi/trmapi"><img alt="codecov" src="https://codecov.io/gh/trmapi/trmapi/branch/master/graph/badge.svg"></a>
+<a href="https://greenkeeper.io/"><img alt="Greenkeeper badge" src="https://badges.greenkeeper.io/trmapi/trmapi.svg"></a>
 <a href="https://twitter.com/acdlite/status/974390255393505280"><img alt="Blazing Fast" src="https://img.shields.io/badge/speed-blazing%20%F0%9F%94%A5-brightgreen.svg?style=flat-square"></a>
 <a href=""><img alt="" src=""></a>
 <br/>
@@ -20,7 +20,7 @@ Al usar esta API se reduce la carga sobre los servidores de la SFC y se garantiz
 
 ## Uso
 
-El servicio es gratuito y de libre acceso. Todas las solicitudes se hacen usando el método `GET` especificando el recurso solicitado a la url base:
+Todas las solicitudes se hacen usando el método `GET` especificando el recurso solicitado a la url base:
 
     https://api.trmapi.com/
 
@@ -104,7 +104,7 @@ Para desplegar la API se debe contar con:
 Una vez confirmados los requisitos anteriores se debe clonar el repositorio:
 
 ```shell
-git clone https://github.com/archemiro/trmapi.git
+git clone https://github.com/trmapi/trmapi.git
 ```
 
 Ingresar a la carpeta:
@@ -155,7 +155,7 @@ dCurrent="2013-01-01"
 dEnd="$(date -I)"
 until [[ $dCurrent > $dEnd ]]; do
         printf "Writing $(date -Im) "
-        curl -s {{ApiUrl}}/$dCurrent | jq -r '"\(.date) \(.value)"'
+        curl -s {{ApiUrl}}/$dCurrent
         d=$(date -I -d "$dCurrent + 1 day")
         sleep 1
 done
