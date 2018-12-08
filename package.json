@@ -1,5 +1,5 @@
 {
-  "name": "trmapi",
+  "name": "@trmapi/trmapi",
   "version": "0.0.0-development",
   "description": "JSON API para consultar la Tasa Representativa del Mercado en la Superintendencia Financiera de Colombia.",
   "main": "dist/handler.js",
@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/archemiro/trmapi.git"
+    "url": "git+https://github.com/trmapi/trmapi.git"
   },
   "keywords": [
     "Colombia",
@@ -45,7 +45,7 @@
   "author": "Mauricio Robayo <archemiro@gmail.com> (https://www.archemiro.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/archemiro/trmapi/issues"
+    "url": "https://github.com/trmapi/trmapi/issues"
   },
   "homepage": "https://www.trmapi.com",
   "devDependencies": {
