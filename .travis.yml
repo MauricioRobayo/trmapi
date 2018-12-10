@@ -16,8 +16,13 @@ script:
   - npm test
   - npx codecov
 after_success:
-  - npx semantic-release
-  - npm run deploy
+  - npx semantic_release
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: npm run deploy
+  on:
+    branch: master
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
