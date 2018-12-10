@@ -1,5 +1,5 @@
 const debug = require("debug")("getTrmDataByDate");
-const cambio = require("cambio");
+const cambio = require("@trmapi/cambio");
 const {
   formatDate,
   dateIsInRange,
