@@ -24,12 +24,6 @@
     "pack": "npm-pack-zip",
     "deploy": "npm-run-all sam:validate build sam:package sam:deploy outputs"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/trmapi/trmapi.git"
