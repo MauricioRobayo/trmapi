@@ -22,9 +22,7 @@
     "sam:validate": "sam validate -t template.yaml",
     "outputs": "aws cloudformation describe-stacks --stack-name trmapi --query \"Stacks[].Outputs[]\"",
     "pack": "npm-pack-zip",
-    "deploy": "npm-run-all sam:validate build sam:package sam:deploy outputs",
-    "travis-deploy-once": "travis-deploy-once",
-    "semantic-release": "semantic-release"
+    "deploy": "npm-run-all sam:validate build sam:package sam:deploy outputs"
   },
   "husky": {
     "hooks": {
@@ -69,8 +67,7 @@
     "rollup": "^0.67.4",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-resolve": "^3.4.0",
-    "semantic-release": "^15.12.4",
-    "travis-deploy-once": "^5.0.9"
+    "semantic-release": "^15.12.4"
   },
   "dependencies": {
     "aws-sdk": "^2.370.0",
