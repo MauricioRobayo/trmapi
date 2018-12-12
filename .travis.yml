@@ -15,9 +15,13 @@ script:
   - npm run lint
   - npm test
   - npx codecov
+deploy:
+  provider: script
+  script: npm run deploy
+  on:
+    branch: master
 after_success:
   - npx semantic-release
-  - npm run deploy
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
