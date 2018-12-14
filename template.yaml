@@ -24,6 +24,8 @@ Resources:
       ProvisionedThroughput:
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
+      StreamSpecification:
+        StreamViewType: NEW_IMAGE
       Tags:
         - Key: AppName
           Value: !Ref AWS::StackName
@@ -63,6 +65,11 @@ Resources:
       Tags:
         AppName: !Ref AWS::StackName
 Outputs:
+  DDBStream:
+    Description: DynamoDB Stream
+    Value: !GetAtt TrmTable.StreamArn
+    Export:
+      Name: !Sub "${AWS::StackName}-ddb-stream"
   ApiUrl:
     Description: Endpoint de API Gateway
     Value: !Sub https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/
