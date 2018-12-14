@@ -22,7 +22,7 @@
     "sam:validate": "sam validate -t template.yaml",
     "outputs": "aws cloudformation describe-stacks --stack-name trmapi --query \"Stacks[].Outputs[]\"",
     "pack": "npm-pack-zip",
-    "deploy": "npm-run-all sam:validate build sam:package sam:deploy outputs"
+    "deploy": "npm-run-all sam:validate build sam:package sam:deploy"
   },
   "repository": {
     "type": "git",
