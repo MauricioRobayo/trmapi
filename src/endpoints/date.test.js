@@ -179,7 +179,7 @@ describe("Tests for an invalid date requests", () => {
   });
 });
 describe("Tests for out of range requests", () => {
-  it("verifies 404 for current date + ona day", async () => {
+  it("verifies 404 for current date + one day", async () => {
     const date = new Date();
     date.setDate(date.getDate() + 1);
     const formatedDate = formatDate(date);
