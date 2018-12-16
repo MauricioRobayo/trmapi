@@ -1,4 +1,3 @@
-const debug = require("debug")("getTrmDataByDate");
 const cambio = require("@trmapi/cambio");
 const {
   formatDate,
@@ -43,7 +42,6 @@ exports.getTrmDataByDate = async event => {
   try {
     const trmData = await dbGet(getParams);
     if (!trmData.Item) {
-      debug("Obteniendo dato de la SFC...");
       const { trm } = await cambio(date);
       const item = { partition, date, ...trm };
       trmData.Item = filterTrmData(item, validity);
@@ -59,7 +57,6 @@ exports.getTrmDataByDate = async event => {
         Item: item
       };
       try {
-        debug("Escribiendo el dato nuevo a la base de datos...");
         await dbPut(putParams);
       } catch (err) {
         return createResponse(500, err);
