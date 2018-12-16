@@ -14,14 +14,12 @@
     "dynamodb:start": "npm-run-all dynamodb:up --parallel dynamodb:logs dynamodb:bootstrap",
     "start:server": "sam local start-api --env-vars env.json --docker-network trmapi_dynamodb",
     "start:dev": "npm-run-all --parallel dynamodb:start build:watch start:server",
-    "prebuild": "rimraf dist",
-    "build": "rollup -c",
+    "build": "webpack",
     "build:watch": "npm run build -- --watch",
     "sam:package": "sam package --template-file template.yaml --s3-bucket trmapi --output-template-file packaged.yaml",
     "sam:deploy": "sam deploy --template-file packaged.yaml --stack-name trmapi --capabilities CAPABILITY_IAM",
     "sam:validate": "sam validate -t template.yaml",
     "outputs": "aws cloudformation describe-stacks --stack-name trmapi --query \"Stacks[].Outputs[]\"",
-    "pack": "npm-pack-zip",
     "deploy": "npm-run-all sam:validate build sam:package sam:deploy"
   },
   "repository": {
@@ -57,11 +55,9 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
     "redoc-cli": "^0.7.0",
-    "rimraf": "^2.6.2",
-    "rollup": "^0.67.4",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "semantic-release": "^15.12.4"
+    "semantic-release": "^15.12.4",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
     "@trmapi/cambio": "^1.0.1",
