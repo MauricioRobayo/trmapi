@@ -44,24 +44,24 @@
     "@commitlint/cli": "^7.2.1",
     "@commitlint/config-conventional": "^7.1.2",
     "codecov": "^3.1.0",
-    "csv-parse": "^4.1.0",
+    "csv-parse": "^4.2.0",
     "eslint": "^5.10.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-import": "^2.14.0",
-    "husky": "^1.2.0",
+    "husky": "^1.2.1",
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3",
     "redoc-cli": "^0.7.0",
-    "semantic-release": "^15.12.4",
+    "semantic-release": "^15.13.0",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
     "@trmapi/cambio": "^1.0.1",
-    "aws-sdk": "^2.373.0"
+    "aws-sdk": "^2.377.0"
   },
   "files": [
     "dist"
