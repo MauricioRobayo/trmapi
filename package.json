@@ -61,8 +61,7 @@
   },
   "dependencies": {
     "@trmapi/cambio": "^1.0.1",
-    "aws-sdk": "^2.373.0",
-    "debug": "^4.1.0"
+    "aws-sdk": "^2.373.0"
   },
   "files": [
     "dist"
