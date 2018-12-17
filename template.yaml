@@ -4,9 +4,10 @@ Description: JSON API para consultar la Tasa Representativa del Mercado en la Su
 Globals:
   Api:
     Cors:
-      AllowMethods: "'*'"
-      AllowHeaders: "'*'"
+      AllowHeaders: "'Content-Type, Authorization, X-Amz-Date, X-Api-Key, X-Amz-Security-Token'"
+      AllowMethods: "'GET'"
       AllowOrigin: "'*'"
+      MaxAge: "'600'"
 Resources:
   TrmTable:
     Type: AWS::DynamoDB::Table

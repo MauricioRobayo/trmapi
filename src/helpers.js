@@ -1,6 +1,10 @@
 const config = require("./config");
 
 const createResponse = (statusCode, body) => ({
+  headers: {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*"
+  },
   statusCode,
   body: JSON.stringify(body)
 });
