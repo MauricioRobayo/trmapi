@@ -1,7 +1,14 @@
 swagger: "2.0"
 info:
   title: TRMAPI
-  description: JSON API para consultar la Tasa Representativa del Mercado en la Superintendencia Financiera de Colombia.
+  description: |
+    JSON API para consultar la [Tasa Representativa del Mercado](http://www.banrep.gov.co/es/tasa-cambio-del-peso-colombiano-trm) (TRM) en el [Servicio Web](https://www.superfinanciera.gov.co/inicio/60819) de la Superintendencia Financiera de Colombia (SFC).
+
+    Esta API es una función Lambda que se ejecuta en AWS y a la cual se accede por API Gateway, lo que garantiza su estabilidad, escalabilidad y rapidez.
+
+    La función lambda solicita la información al servicio web de la SFC y almacena el valor de la TRM en una tabla de Dynamodb.
+
+    Al usar esta API se reduce la carga sobre los servidores de la SFC y se garantiza la disponibilidad del servicio.
   version: 1.0.0
   license:
     name: MIT

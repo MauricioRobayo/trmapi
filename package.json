@@ -20,7 +20,8 @@
     "sam:deploy": "sam deploy --template-file packaged.yaml --stack-name trmapi --capabilities CAPABILITY_IAM",
     "sam:validate": "sam validate -t template.yaml",
     "outputs": "aws cloudformation describe-stacks --stack-name trmapi --query \"Stacks[].Outputs[]\"",
-    "deploy": "npm-run-all sam:validate build sam:package sam:deploy"
+    "deploy": "npm-run-all sam:validate build sam:package sam:deploy",
+    "build:docs": "spectacle -t docs -l ./assets/trmapi-logo.png swagger.yml"
   },
   "repository": {
     "type": "git",
@@ -56,6 +57,7 @@
     "prettier": "^1.15.3",
     "redoc-cli": "^0.7.0",
     "semantic-release": "^15.13.0",
+    "spectacle-docs": "^1.0.6",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
   },
