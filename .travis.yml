@@ -10,7 +10,7 @@ install:
   - pip install --user awscli
   - pip install --user aws-sam-cli
 node_js:
-  - "8.10"
+  - "10"
 script:
   - npm run lint
   - npm test

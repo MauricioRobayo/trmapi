@@ -34,7 +34,7 @@ Resources:
     Type: "AWS::Serverless::Function"
     Properties:
       Handler: handler.trm
-      Runtime: nodejs8.10
+      Runtime: nodejs10.x
       CodeUri: dist/
       Description: Consulta el servicio web de la SFC y devuelve la información en formato JSON.
       MemorySize: 128
