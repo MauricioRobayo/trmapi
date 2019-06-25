@@ -42,11 +42,11 @@
   },
   "homepage": "https://www.trmapi.com",
   "devDependencies": {
-    "@commitlint/config-conventional": "^8.0.0",
     "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
     "codecov": "^3.1.0",
     "csv-parse": "^4.2.0",
-    "eslint": "^6.0.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.14.0",
