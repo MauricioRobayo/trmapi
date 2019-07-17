@@ -58,7 +58,7 @@
     "redoc-cli": "^0.8.1",
     "semantic-release": "^15.13.0",
     "spectacle-docs": "^1.0.6",
-    "webpack": "^4.27.1",
+    "webpack": "^4.36.0",
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
