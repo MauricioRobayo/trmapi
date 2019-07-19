@@ -6,8 +6,6 @@ notifications:
   email:
     on_failure: always
 install:
-  - pip install --user awscli
-  - pip install --user aws-sam-cli
 node_js:
   - "10"
 script:
@@ -17,7 +15,9 @@ script:
 deploy:
   skip_cleanup: true
   provider: script
-  script: npm run deploy
+  script:
+    - pip install --user awscli aws-sam-cli
+    - npm run deploy
   on:
     branch: master
 after_success:
