@@ -6,7 +6,6 @@ notifications:
   email:
     on_failure: always
 install:
-  - npm install
   - pip install --user awscli
   - pip install --user aws-sam-cli
 node_js:
