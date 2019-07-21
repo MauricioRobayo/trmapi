@@ -5,19 +5,17 @@ cache:
 notifications:
   email:
     on_failure: always
-install:
 node_js:
   - "10"
 script:
   - npm run lint
   - npm test
   - npx codecov
+before_deploy:
+  - pip install --user awscli aws-sam-cli
 deploy:
-  skip_cleanup: true
   provider: script
-  script:
-    - pip install --user awscli aws-sam-cli
-    - npm run deploy
+  script: npm run deploy
   on:
     branch: master
 after_success:
