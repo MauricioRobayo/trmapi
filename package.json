@@ -42,10 +42,10 @@
   },
   "homepage": "https://www.trmapi.com",
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/cli": "^8.3.3",
+    "@commitlint/config-conventional": "^8.3.3",
     "codecov": "^3.1.0",
-    "csv-parse": "^4.8.2",
+    "csv-parse": "^4.8.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.9.0",
@@ -58,12 +58,12 @@
     "redoc-cli": "^0.9.4",
     "semantic-release": "^15.14.0",
     "spectacle-docs": "^1.0.6",
-    "webpack": "^4.41.4",
+    "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
     "@trmapi/cambio": "^1.0.1",
-    "aws-sdk": "^2.595.0"
+    "aws-sdk": "^2.597.0"
   },
   "files": [
     "dist"
