@@ -1,3 +1,9 @@
+**This service has been deprecated since now there is an official [Tasa Representativa del Mercado API](https://dev.socrata.com/foundry/www.datos.gov.co/32sa-8pi3).**
+
+You can check the [trm-api]() package, a wrapper to simplify GET requests and JSON response parsing from the official Tasa Representativa del Mercado API.
+
+---
+
 <p align="center">
 <img alt="trmapi" src="./assets/trmapi-logo.png">
 <br/>
